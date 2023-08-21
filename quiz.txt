@@ -1,0 +1,25 @@
+import React from 'react';
+// Udemy's code editor is a little weird... We do *not* need an 'import {useState}' line
+
+function App() {
+    const[input,setinput]=useState('');
+    const HandleChange = (event)=>{
+        setinput(event.target.value);
+    }
+    return (
+        <div>
+          <div>
+            Enter some text
+          </div>
+          <input onChange={HandleChange}/>
+          <h3>Your Text</h3>
+          <p>
+          {input}
+            {/* show text from the input here */}
+          </p>
+        </div>
+    );
+}
+
+const useState = React.useState;
+export default App;
